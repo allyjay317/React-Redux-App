@@ -1,4 +1,4 @@
-import { fade, makeStyles } from '@material-ui/core'
+import { fade, makeStyles, TextareaAutosize } from '@material-ui/core'
 
 const drawerWidth = 240
 
@@ -10,6 +10,11 @@ export const useStyles = makeStyles((theme) => ({
   appBar: {
     width: `calc(100%-${drawerWidth}px)`,
     paddingLeft: drawerWidth
+  },
+  body: {
+    width: `calc(100%-${drawerWidth}px)`,
+    paddingLeft: drawerWidth,
+    paddingTop: '20%'
   },
   drawer: {
     width: drawerWidth,
@@ -61,4 +66,8 @@ export const useStyles = makeStyles((theme) => ({
       width: '20ch',
     },
   },
+  cardImage: {
+    height: '500px',
+
+  }
 }))

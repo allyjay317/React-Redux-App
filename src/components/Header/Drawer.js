@@ -19,6 +19,9 @@ const FFXIVDrawer = () => {
       anchor='left'
     >
       <List>
+        <ListItem>
+          Saved Characters
+        </ListItem>
         {characters.map(char => (
           <ListItem button key={char.name}>
             <ListItemIcon>
