@@ -1,7 +1,5 @@
 const initialState = {
-  characterName: '',
-  server: '',
-  characterData: {},
+  savedCharacters: [{ name: 'Alysonna' }],
   loggedIn: false,
   isFetching: false
 }
