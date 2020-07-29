@@ -12,9 +12,10 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: drawerWidth
   },
   body: {
-    width: `calc(100%-${drawerWidth}px)`,
+    maxWidth: '100%',
     paddingLeft: drawerWidth,
-    paddingTop: '20%'
+    paddingTop: '5%',
+
   },
   drawer: {
     width: drawerWidth,
@@ -68,6 +69,12 @@ export const useStyles = makeStyles((theme) => ({
   },
   cardImage: {
     height: '500px',
+
+  },
+  activeJob: {
+    backgroundColor: 'lightblue'
+  },
+  inactiveJob: {
 
   }
 }))

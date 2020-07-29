@@ -3,7 +3,7 @@ import { useStyles } from '../../utilities/styles'
 import SearchIcon from '@material-ui/icons/Search'
 import { InputBase } from '@material-ui/core'
 import { useSelector, useDispatch } from 'react-redux'
-import { searchChange, fetchCharacter } from '../../redux/actions'
+import { searchChange, fetchCharacter, fetchSearch } from '../../redux/actions'
 import { useHistory } from 'react-router'
 
 const SearchBar = () => {
@@ -19,7 +19,7 @@ const SearchBar = () => {
   const handleSubmit = e => {
     e.preventDefault()
     history.push('/')
-    dispatch(fetchCharacter(searchText))
+    dispatch(fetchSearch(searchText))
   }
 
   return (

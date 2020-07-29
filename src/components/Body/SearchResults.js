@@ -7,10 +7,11 @@ import CharacterCard from './CharacterCard'
 const SearchResults = () => {
   const searchResults = useSelector(state => state.searchResults)
   const loading = useSelector(state => state.isFetching)
+
   const classes = useStyles()
   return (
-    <Grid container direction='column' justify='center' alignItems='center' className={classes.body}>
-      {!loading ? searchResults.map(res => (
+    <Grid container direction='row' justify='center' alignItems='center' spacing={2} className={classes.body}>
+      {loading.length === 0 ? searchResults.map(res => (
         <Grid item>
           <CharacterCard character={res} />
         </Grid>

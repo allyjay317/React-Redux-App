@@ -3,16 +3,18 @@ import { Card, CardActionArea, CardMedia, Typography } from '@material-ui/core'
 import { useStyles } from '../../utilities/styles'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
+import { fetchCharacter } from '../../redux/actions'
 
 const CharacterCard = (props) => {
   const classes = useStyles()
   const history = useHistory()
   const isFetching = useSelector(state => state.isFetching)
-  const dispatch = useDispatch()
+
 
   const loadCharacter = url => {
-    if (!isFetching) {
-      history.push(`/character/${props.character.Name}${props.character.Server}`)
+    if (isFetching.length === 0) {
+
+      history.push(`/character/${props.character.ID}`)
     }
   }
 
