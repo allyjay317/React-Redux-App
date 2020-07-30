@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Grid } from '@material-ui/core'
-import { useStyles } from '../../utilities/styles'
+import { useStyles } from '../../../utilities/styles'
 import CharacterCard from './CharacterCard'
 
 const SearchResults = () => {

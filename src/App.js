@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Route } from 'react-router';
 import Header from './components/Header/Header';
-import SearchResults from './components/Body/SearchResults';
+import SearchResults from './components/Body/Root/SearchResults';
 import CharacterPage from './components/Body/Character/CharacterPage';
 
 import { testData } from './testData'
