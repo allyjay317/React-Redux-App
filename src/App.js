@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Route } from 'react-router';
 import Header from './components/Header/Header';
@@ -7,6 +6,7 @@ import SearchResults from './components/Body/Root/SearchResults';
 import CharacterPage from './components/Body/Character/CharacterPage';
 
 import { testData } from './testData'
+import { CharacterPageSkeleton, SearchResultsSkeleton } from './utilities/skeletons';
 
 
 
@@ -19,6 +19,12 @@ function App() {
       </Route>
       <Route path='/character/:id'>
         <CharacterPage data={testData} />
+      </Route>
+      <Route path='/skeletoncharacter'>
+        <CharacterPageSkeleton />
+      </Route>
+      <Route path='/skeletonsearch'>
+        <SearchResultsSkeleton />
       </Route>
     </div>
   );

@@ -11,8 +11,8 @@ const JobGrid = (props) => {
     <Grid container>
       {jobs.map(job => {
         return (
-          <Grid item className={job.ClassID === activeJob ? classes.activeJob : classes.inactiveJob}>
-            <img src={job.UnlockedState.Name !== 'Blue Mage (Limited Job)' ? `https://xivapi.com/cj/1/${job.UnlockedState.Name.toLowerCase().split(' ').join('')}.png` : 'https://xivapi.com/cj/1/bluemage.png'} style={{ width: '50px' }} />
+          <Grid item className={job.ClassID === activeJob ? classes.activeJob : classes.inactiveJob} key={`JOBGRID:${job.JobID}`}>
+            <img src={job.UnlockedState.Name !== 'Blue Mage (Limited Job)' ? `https://xivapi.com/cj/1/${job.UnlockedState.Name.toLowerCase().split(' ').join('')}.png` : 'https://xivapi.com/cj/1/bluemage.png'} style={{ width: '50px' }} alt={`${job.UnlockedState.Name} Job Icon`} />
             <Typography>{job.Level}</Typography>
           </Grid>
         )

@@ -1,8 +1,7 @@
 import React from 'react'
 import { useStyles } from '../../utilities/styles'
-import { Drawer, Typography, ListItemIcon, ListItem, ListItemText, List, Avatar } from '@material-ui/core'
+import { Drawer, ListItemIcon, ListItem, ListItemText, List, Avatar } from '@material-ui/core'
 import { useSelector } from 'react-redux'
-import InboxIcon from '@material-ui/icons/Inbox'
 import { useHistory } from 'react-router'
 
 const FFXIVDrawer = () => {

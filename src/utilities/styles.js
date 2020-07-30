@@ -1,4 +1,4 @@
-import { fade, makeStyles, TextareaAutosize } from '@material-ui/core'
+import { fade, makeStyles } from '@material-ui/core'
 
 const drawerWidth = 240
 

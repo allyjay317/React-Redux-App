@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStyles } from '../../utilities/styles'
-import { AppBar, Toolbar, Typography, CssBaseline, TextField } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, CssBaseline } from '@material-ui/core'
 
 import FFXIVDrawer from './Drawer'
 import SearchBar from './SearchBar'

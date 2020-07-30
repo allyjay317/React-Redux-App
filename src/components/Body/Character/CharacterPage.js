@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { useStyles } from '../../../utilities/styles'
-import { Grid, Typography, Card, CardHeader, CardContent, Button } from '@material-ui/core'
+import { Grid, Typography, Card, CardContent, Button } from '@material-ui/core'
 import JobGrid from './JobGrid'
 import Portrait from './Portrait'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router'
 import { fetchCharacter, bookmark } from '../../../redux/actions'
+import { CharacterPageSkeleton } from '../../../utilities/skeletons'
 
 const CharacterPage = (props) => {
   const classes = useStyles()
@@ -17,7 +18,7 @@ const CharacterPage = (props) => {
   useEffect(() => {
 
     dispatch(fetchCharacter(params.id))
-  }, [params.id])
+  }, [params.id, dispatch])
 
   const saveCharacter = e => {
     dispatch(bookmark({ name: Character.Name, id: params.id, avatar: Character.Avatar }))
@@ -55,7 +56,7 @@ const CharacterPage = (props) => {
           </Grid>
         </Grid>
       </Grid>) : (
-          <Grid item>Loading</Grid>
+          <CharacterPageSkeleton />
         )}
     </>
   )

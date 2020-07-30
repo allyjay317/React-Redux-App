@@ -1,9 +1,8 @@
 import React from 'react'
 import { Card, CardActionArea, CardMedia, Typography } from '@material-ui/core'
 import { useStyles } from '../../../utilities/styles'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
-import { fetchCharacter } from '../../../redux/actions'
 
 const CharacterCard = (props) => {
   const classes = useStyles()

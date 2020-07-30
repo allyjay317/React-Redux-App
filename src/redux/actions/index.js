@@ -49,7 +49,6 @@ export const fetchCharacter = character => dispatch => {
       dispatch({ type: FETCH_CHARACTER_SUCCESS, payload: res.data.Character })
       Axios.get(`https://xivapi.com/Title/${res.data.Character.Title}`)
         .then(res => {
-          console.log(res)
           dispatch({ type: FETCH_TITLE_SUCCESS, payload: res.data.Name })
         })
         .catch(err => {
@@ -70,7 +69,8 @@ export const fetchCharacter = character => dispatch => {
           type: FETCH_GEAR_SUCCESS, payload: responses.map(res => {
             return {
               name: res.data.Name,
-              icon: `https://xivapi.com${res.data.Icon}`
+              icon: `https://xivapi.com${res.data.Icon}`,
+              id: res.data.ID
             }
           })
         })
@@ -84,7 +84,8 @@ export const fetchCharacter = character => dispatch => {
           type: FETCH_GLAMOUR_SUCCESS, payload: responses.map(res => {
             return {
               name: res.data.Name,
-              icon: `https://xivapi.com${res.data.Icon}`
+              icon: `https://xivapi.com${res.data.Icon}`,
+              id: res.data.ID
             }
           })
         })
